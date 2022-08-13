@@ -1,0 +1,17 @@
+@import 'globals';
+
+.app {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  min-height: 100vh;
+}
+
+.app.light {
+  background-color: $very-light-gray;
+  color: $light-theme-text;
+}
+
+.app.dark {
+  background-color: $very-dark-blue;
+  color: $white;
+}

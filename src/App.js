@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useContext } from 'react'
+import { Route, Routes } from 'react-router-dom'
 
-function App() {
+import AllCountries from './pages/AllCountries'
+import CountryDetails from './pages/CountryDetails'
+import Header from './components/Header/Header'
+
+import { AppContext } from './App.provider'
+
+import './styles/App.scss'
+
+const App = () => {
+  const { theme } = useContext(AppContext)
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`app ${theme === 'dark' ? 'dark' : ''}`}>
+      <Header />
+      <Routes>
+        <Route exact path='/' element={<AllCountries />} />
+        <Route exact path='/:countryCode' element={<CountryDetails />} />
+      </Routes>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

@@ -1,0 +1,21 @@
+@import '../../styles/globals';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 800;
+  box-shadow: $box-shadow;
+}
+
+.header.light {
+  color: $light-theme-text;
+  background-color: $white;
+}
+
+.header.dark {
+  color: $white;
+  background-color: $dark-blue;
+}

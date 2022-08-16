@@ -3,7 +3,7 @@ import { Route, Routes } from 'react-router-dom'
 
 import AllCountries from './pages/AllCountries'
 import CountryDetails from './pages/CountryDetails'
-import Header from './components/Header/Header'
+import Header from './components/Header'
 
 import { AppContext } from './App.provider'
 

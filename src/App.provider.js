@@ -1,12 +1,17 @@
 import { createContext, useState } from 'react'
 
+// import {}
+
 export const AppContext = createContext({
   theme: 'dark',
   switchTheme: () => {},
+  countries: [],
+  setCountries: () => {},
 })
 
 const AppProvider = ({ children }) => {
   const [theme, setTheme] = useState('dark')
+  const [countries, setCountries] = useState([])
 
   const switchTheme = () => setTheme(theme === 'dark' ? 'light' : 'dark')
 
@@ -15,6 +20,8 @@ const AppProvider = ({ children }) => {
       value={{
         theme,
         switchTheme,
+        countries,
+        setCountries
       }}
     >
       {children}

@@ -5,10 +5,10 @@ import CountryCard from '../components/CountryCard'
 import { AppContext } from '../App.provider'
 
 const AllCountries = () => {
-  const { theme } = useContext(AppContext)
+  const { theme, setCountries } = useContext(AppContext)
 
   return (
-    <main>
+    <main >
       <CountryCard />
     </main>
   )

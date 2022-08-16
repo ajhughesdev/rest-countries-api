@@ -1,16 +1,23 @@
-import { useContext } from 'react'
+import { useContext, useEffect } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
 import AllCountries from './pages/AllCountries'
 import CountryDetails from './pages/CountryDetails'
 import Header from './components/Header'
 
+import { getCountries } from './utilities'
 import { AppContext } from './App.provider'
 
 import './styles/App.scss'
 
 const App = () => {
-  const { theme } = useContext(AppContext)
+  const { theme, setCountries } = useContext(AppContext)
+
+  useEffect(() => {
+    getCountries().then(({ data }) => {
+      setCountries(data)
+    })
+  }, [setCountries])
 
   return (
     <div className={`app ${theme === 'dark' ? 'dark' : ''}`}>

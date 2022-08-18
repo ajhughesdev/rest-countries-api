@@ -20,7 +20,7 @@ const App = () => {
   }, [setCountries])
 
   return (
-    <div className={`app ${theme === 'dark' ? 'dark' : ''}`}>
+    <div className={`app ${theme === 'light' ? 'light' : ''}`}>
       <Header />
       <Routes>
         <Route exact path='/' element={<AllCountries />} />

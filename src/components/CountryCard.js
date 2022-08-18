@@ -3,12 +3,13 @@ import { useContext } from 'react'
 import CountryCardItem from './CountryCardItem'
 
 import { AppContext } from '../App.provider'
+import { withRouter } from '../utilities'
 
-const CountryCard = () => {
+const CountryCard = ({ history }) => {
   const { theme, countries } = useContext(AppContext)
 
   return (
-    <article>
+    <>
       {countries.map((country) => (
         <CountryCardItem
           theme={theme}
@@ -18,9 +19,11 @@ const CountryCard = () => {
           capital={country.capital}
           population={country.population}
           region={country.region}
+          onClick={() => history.push(country.alpha3Code)}
         />
       ))}
-    </article>
+    </>
   )
 }
-export default CountryCard
+
+export default withRouter(CountryCard)

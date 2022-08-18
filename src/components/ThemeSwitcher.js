@@ -1,7 +1,5 @@
-import styles from '../styles/ThemeSwitcher.module.scss'
-
 const ThemeSwitcher = (props) => (
-  <button className={styles.ThemeSwitcher_button} onClick={props.switchTheme}>
+  <button className="ThemeSwitcher_button" onClick={props.switchTheme}>
     {props.theme === 'dark' ? (
       <>
         <svg

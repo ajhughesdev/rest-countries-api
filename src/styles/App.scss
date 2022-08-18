@@ -4,6 +4,8 @@
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   min-height: 100vh;
+  background-color: $very-dark-blue;
+  color: $white;
 }
 
 .app.light {
@@ -11,7 +13,88 @@
   color: $light-theme-text;
 }
 
-.app.dark {
-  background-color: $very-dark-blue;
-  color: $white;
+.header-container {
+  box-shadow: $box-shadow;
+  background-color: $dark-blue;
+
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    padding: 2rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 800;
+    margin-inline: auto;
+  }
+}
+
+.header-container.light {
+  background-color: $white;
+}
+
+.ThemeSwitcher_button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: calc(16.37 / 12);
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2.5rem;
+  max-width: 90rem;
+  padding-inline: 1rem;
+}
+
+article {
+  box-shadow: $box-shadow;
+  background-color: $dark-blue;
+  min-height: 21rem;
+  border-radius: 0.3125rem;
+  width: 16.5rem;
+
+  .flagImg {
+    width: 16.5rem;
+    height: 10rem;
+    object-fit: cover;
+    box-shadow: $box-shadow-flag;
+    background-color: hsl(0, 0%, 50%);
+    border-radius: 0.3125rem 0.3125rem 0 0;
+  }
+
+  .info {
+    padding: 1.5rem 1.5rem 2.875rem;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+    line-height: calc(26 / 18);
+    padding-block: 0 0.5rem;
+    overflow-x: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor:default;
+  }
+
+  li {
+    padding-block: 0.5rem 0;
+    font-size: 0.875rem;
+    font-weight: 300;
+    line-height: calc(16 / 14);
+  }
+
+  .info-item {
+    font-weight: 600;
+  }
+}
+
+article.light {
+  background-color: $white;
 }

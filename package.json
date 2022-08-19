@@ -1,6 +1,6 @@
 {
   "name": "rest-countries-api",
-  "homepage": "https://ajhughesdev.github.io/rest-countries-api/",
+  "homepage": "https://ajhughesdev.github.io/rest-countries-api",
   "version": "0.1.0",
   "private": true,
   "dependencies": {

@@ -3,10 +3,14 @@ import Search from '../components/Search'
 
 const AllCountries = () => {
   return (
-    <main>
-      <Search />
-      <CountryCard className='countryCard' />
-    </main>
+    <>
+      <nav>
+        <Search />
+      </nav>
+      <main>
+        <CountryCard className='countryCard' />
+      </main>
+    </>
   )
 }
 export default AllCountries

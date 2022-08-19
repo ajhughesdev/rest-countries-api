@@ -5,7 +5,7 @@ import CountryCardItem from './CountryCardItem'
 
 import { AppContext } from '../App.provider'
 
-const CountryCard = ({ history }) => {
+const CountryCard = () => {
   const { theme, countries } = useContext(AppContext)
   const navigate = useNavigate()
 

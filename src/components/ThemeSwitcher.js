@@ -1,5 +1,5 @@
 const ThemeSwitcher = (props) => (
-  <button className='ThemeSwitcher_button' onClick={props.switchTheme}>
+  <button className='theme-switcher-button' onClick={props.switchTheme}>
     <svg
       width='16'
       height='16'

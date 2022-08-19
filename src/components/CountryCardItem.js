@@ -6,10 +6,15 @@ const CountryCardItem = (props) => {
   const { theme } = useContext(AppContext)
 
   return (
-    <article className={theme === 'light' ? 'light' : ''}>
+    <article
+      className={theme === 'light' ? 'light' : ''}
+      onClick={props.onClick}
+    >
       <img
         className='flagImg'
         loading='lazy'
+        height='160'
+        width='264'
         src={props.flag}
         alt={`${props.name}'s flag`}
       />

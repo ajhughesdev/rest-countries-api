@@ -11,20 +11,21 @@ import { AppContext } from './App.provider'
 import './styles/App.scss'
 
 const App = () => {
-  const { theme, setCountries } = useContext(AppContext)
+  const { theme, setCountries, setAllCountries } = useContext(AppContext)
 
   useEffect(() => {
     getCountries().then(({ data }) => {
+      setAllCountries(data)
       setCountries(data)
     })
-  }, [setCountries])
+  }, [setCountries, setAllCountries])
 
   return (
     <div className={`app ${theme === 'light' ? 'light' : ''}`}>
       <Header />
       <Routes>
-        <Route exact path='/' element={<AllCountries />} />
-        <Route exact path='/:countryCode' element={<CountryDetails />} />
+        <Route path='/' element={<AllCountries />} />
+        <Route path=':countryCode' element={<CountryDetails />} />
       </Routes>
     </div>
   )

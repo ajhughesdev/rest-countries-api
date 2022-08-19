@@ -76,15 +76,15 @@ article {
     font-size: 18px;
     font-weight: 800;
     line-height: calc(26 / 18);
-    padding-block: 0 0.5rem;
+    padding-block: 0 0.75rem;
     overflow-x: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    cursor:default;
+    cursor: default;
   }
 
   li {
-    padding-block: 0.5rem 0;
+    padding-block: 0.25rem 0;
     font-size: 0.875rem;
     font-weight: 300;
     line-height: calc(16 / 14);
@@ -97,4 +97,74 @@ article {
 
 article.light {
   background-color: $white;
+}
+
+.dropdown {
+  $height: 3rem;
+  position: relative;
+  width: 12.5rem;
+  font-size: 0.75rem;
+  font-weight: 400;
+
+  .click-area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: $dark-blue;
+    height: $height;
+    width: inherit;
+    cursor: pointer;
+    border-radius: 0.3125rem;
+    padding: 0 1.5rem;
+    box-shadow: 0 0.125rem 0.5625rem hsla(0, 0%, 0%, 0.053);
+  }
+
+  ul {
+    position: absolute;
+    top: calc(#{$height} + 0.25rem);
+    background: $dark-blue;
+    width: inherit;
+    border-radius: 0.3125rem;
+    display: none;
+    box-shadow: 0 0.125rem 0.5625rem hsla(0, 0%, 0%, 0.053);
+    padding-block: 0.75rem;
+
+    &.open {
+      display: flex;
+      flex-direction: column;
+    }
+
+    li {
+      padding: 0.25rem 1.5rem;
+      cursor: pointer;
+      list-style: none;
+
+      &:hover,
+      &.selected {
+        background: $very-dark-blue;
+        transition: background 300ms;
+      }
+    }
+  }
+}
+
+.dropdown.light {
+  .click-area {
+    background: $white;
+  }
+
+  ul {
+    background: $white;
+  }
+
+  li {
+    &:hover,
+    &.selected {
+      background: hsla(0, 0%, 0%, 0.35);
+    }
+  }
+}
+
+.close {
+  transform: rotate(180deg);
 }

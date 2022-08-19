@@ -1,12 +1,13 @@
 import { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import CountryCardItem from './CountryCardItem'
 
 import { AppContext } from '../App.provider'
-import { withRouter } from '../utilities'
 
 const CountryCard = ({ history }) => {
   const { theme, countries } = useContext(AppContext)
+  const navigate = useNavigate()
 
   return (
     <>
@@ -19,11 +20,11 @@ const CountryCard = ({ history }) => {
           capital={country.capital}
           population={country.population}
           region={country.region}
-          onClick={() => history.push(country.alpha3Code)}
+          onClick={() => navigate(country.alpha3Code)}
         />
       ))}
     </>
   )
 }
 
-export default withRouter(CountryCard)
+export default CountryCard

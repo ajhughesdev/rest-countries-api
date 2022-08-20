@@ -15,7 +15,7 @@ const ThemeSwitcher = (props) => (
         stroke='currentColor'
       />
     </svg>
-    {props.theme === 'light' ? <p>Dark Mode</p> : <p>Light Mode</p>}
+    {props.theme === 'light' ? 'Dark Mode' : 'Light Mode'}
   </button>
 )
 

@@ -1,4 +1,4 @@
-@import 'globals';
+@import "globals";
 
 .countryDetails {
   max-width: 23.4375rem;
@@ -127,8 +127,6 @@
       display: flex;
       justify-content: space-between;
     }
-
-
   }
 }
 
@@ -157,12 +155,12 @@
       grid-area: 6 / 5 / 8 / 8;
       display: grid;
       grid-template-columns: repeat(4, 98px);
-      
     }
   }
 }
 
 .border {
+  cursor: pointer;
   font-size: 0.75rem;
   font-weight: 300;
   line-height: calc(16.37 / 12);

@@ -1,8 +1,7 @@
 {
   "name": "rest-countries-api",
-  "homepage": "https://ajhughesdev.github.io/rest-countries-api",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "private": false,
   "dependencies": {
     "@fontsource/nunito-sans": "^4.5.9",
     "@testing-library/jest-dom": "^5.14.1",
@@ -18,8 +17,6 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -42,8 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
   }
 }

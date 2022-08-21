@@ -1,4 +1,3 @@
-[![Build and Deploy](https://github.com/ajhughesdev/rest-countries-api/actions/workflows/deploy-react-app.yaml/badge.svg)](https://github.com/ajhughesdev/rest-countries-api/actions/workflows/deploy-react-app.yaml)
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
